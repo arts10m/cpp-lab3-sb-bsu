@@ -1,0 +1,23 @@
+cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+        }
+    }
+    if (k == 0) {
+        cout << "The total sum of " << k << " integers is: " << sum_k << endl;
+        return 0; 
+    }
+    for (int i = 1; i <= k; i++) {
+        cout << "Enter integer nr. " << i << ": ";
+        while (true) {
+            if (cin >> number) {
+                sum_k += number; 
+                break; 
+            } else {
+                cout << "Error. Enter an integer: ";
+                cin.clear(); 
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            }
+        }
+    }
+    cout << "The total sum of " << k << " integers is: " << sum_k << endl;
+    return 0;
+}
